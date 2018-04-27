@@ -1,0 +1,82 @@
+{
+    "name": "surround-me",
+    "displayName": "surround-with",
+    "description": "Surrounds the selected text with a statement of your choice. Make sure you only select the text you want to surround from start to end and not the other way around",
+    "version": "0.0.1",
+    "icon": "https://www.roadmate-carpooling.com/surroundme.png",
+    "publisher": "mehditanouti",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.ifMe",
+        "onCommand:extension.tryCatchMe",
+        "onCommand:extension.stringifyMe",
+        "onCommand:extension.parseMe"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.ifMe",
+                "title": "surround-with-if"
+            },
+            {
+                "command": "extension.tryCatchMe",
+                "title": "surround-with-try-catch"
+            },
+            {
+                "command": "extension.stringifyMe",
+                "title": "surround-with-json-stringify"
+            },
+            {
+                "command": "extension.parseMe",
+                "title": "surround-with-json-parse"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.ifMe",
+                "key": "ctrl+shift+i",
+                "mac": "cmd+shift+i",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.tryCatchMe",
+                "key": "ctrl+shift+t",
+                "mac": "cmd+shift+t",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.stringifyMe",
+                "key": "ctrl+shift+j",
+                "mac": "cmd+shift+j",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.parseMe",
+                "key": "ctrl+shift+p",
+                "mac": "cmd+shift+p",
+                "when": "editorTextFocus"
+            }
+        ]
+        
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
