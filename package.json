@@ -3,7 +3,8 @@
     "displayName": "surround-with",
     "description": "Surrounds the selected text with a statement of your choice. Make sure you only select the text you want to surround from start to end and not the other way around",
     "version": "0.0.1",
-    "icon": "https://www.roadmate-carpooling.com/surroundme.png",
+    "icon": "./surroundme.png",
+    "repository":"https://github.com/laconstituante/vs-code-extensions-surroundme.git",
     "publisher": "mehditanouti",
     "engines": {
         "vscode": "^1.22.0"
