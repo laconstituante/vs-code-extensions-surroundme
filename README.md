@@ -59,8 +59,9 @@ Selecting a block from end to start will reject the operation and display a mess
 Also I did not test this extension on Mac or Linux. So sorry in advance if there are bugs there.
 
 ## Release Notes
-First commit
 
-### 0.0.1
-Initial release of surround-me
+Minor change
+
+### 0.0.2
+Fixed a small bug where JSON.parse was not correctly mapped
 --

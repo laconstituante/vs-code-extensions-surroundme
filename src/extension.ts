@@ -101,7 +101,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     let parseMe = vscode.commands.registerCommand('extension.parseMe', () => {        
         if(!vscode.window.activeTextEditor.selection.isEmpty){
-            surroundWithFunction("JSON.stringify");
+            surroundWithFunction("JSON.parse");
         }else{
             vscode.window.showInformationMessage('no text selected');
         }
