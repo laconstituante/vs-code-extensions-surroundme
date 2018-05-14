@@ -2,7 +2,7 @@
     "name": "surround-me",
     "displayName": "surround-with",
     "description": "Surrounds the selected text with a statement of your choice. Make sure you only select the text you want to surround from start to end and not the other way around",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "icon": "surroundme.png",
     "repository":"https://github.com/laconstituante/vs-code-extensions-surroundme.git",
     "publisher": "mehditanouti",
@@ -13,6 +13,7 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:extension.tagMe",
         "onCommand:extension.ifMe",
         "onCommand:extension.tryCatchMe",
         "onCommand:extension.stringifyMe",
@@ -22,23 +23,33 @@
     "contributes": {
         "commands": [
             {
+                "command": "extension.tagMe",
+                "title": "Surround an Html block with a tag of your choice"
+            },
+            {
                 "command": "extension.ifMe",
-                "title": "surround-with-if"
+                "title": "Surround some code with if else statement"
             },
             {
                 "command": "extension.tryCatchMe",
-                "title": "surround-with-try-catch"
+                "title": "Surround some code with try catch statement"
             },
             {
                 "command": "extension.stringifyMe",
-                "title": "surround-with-json-stringify"
+                "title": "Surround some code with JSON.stringify(...) statement"
             },
             {
                 "command": "extension.parseMe",
-                "title": "surround-with-json-parse"
+                "title": "Surround some code with JSON.parse(...) statement"
             }
         ],
         "keybindings": [
+            {
+                "command": "extension.tagMe",
+                "key": "alt+shift+w",
+                "mac": "alt+shift+w",
+                "when": "editorTextFocus"
+            },
             {
                 "command": "extension.ifMe",
                 "key": "ctrl+shift+i",
